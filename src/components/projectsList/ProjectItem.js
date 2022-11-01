@@ -42,8 +42,8 @@ const ProjectItem = ({ title, thumbnail, tags, uid, lang }) => {
       </div>
       <h3 className="h3 mt-40">{title}</h3>
       <p className="color-grey mt-16">
-        {tags.map(({ project_Tag }, i) =>
-          i === tags.length - 1 ? project_Tag : project_Tag + ", "
+        {tags.map(({ project_tag }, i) =>
+          i === tags.length - 1 ? project_tag : project_tag + ", "
         )}
       </p>
     </Link>
