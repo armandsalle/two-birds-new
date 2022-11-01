@@ -1,0 +1,78 @@
+:root {
+    --color-black: rgb(0, 0, 0);
+    --color-white: rgb(255, 255, 255);
+    --color-pink: rgb(255, 90, 120);
+    --color-grey: rgb(113, 113, 122);
+    --color-grey-lighter: rgb(94, 94, 103);
+    --color-light-grey: rgb(210, 210, 218);
+    --color-purple-grey: rgb(235, 235, 254);
+    --color-selection: rgb(90, 255, 225);
+
+    --font-primary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    cursor: default;
+    font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%
+    height: -webkit-fill-available;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.6;
+    color: var(--color-black);
+    width: 100vw;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+main {
+    padding: 0 2.4rem;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--color-white);
+}
+
+.hide {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+::selection {
+    color: var(--color-black);
+    background-color: var(--color-selection);
+}

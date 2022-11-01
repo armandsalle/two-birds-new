@@ -1,0 +1,30 @@
+.slice-image-double {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &.mb-32 {
+        @include media("<phone") {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    @include media("<phone") {
+        display: block;
+    }
+
+    &__left,
+    &__right {
+        width: calc(50% - 1.6rem);
+
+        @include media("<phone") {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        @include media("<phone") {
+            margin-top: 2.4rem;
+        }
+    }
+}

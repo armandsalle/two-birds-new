@@ -1,0 +1,212 @@
+.cta.get-back {
+    position: fixed;
+    left: 3rem;
+    top: 4rem;
+    right: auto;
+    bottom: auto;
+    z-index: 10;
+    width: 6.4rem;
+    height: 6.4rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media("<lanscape") {
+        left: 2.4rem;
+        top: 2.4rem;
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 1.6rem;
+    }
+
+    & svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1.4rem;
+        height: 1.4rem;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.project-header,
+.project-patch {
+    margin-bottom: 16rem;
+
+    &.mt-240 {
+        @include media("<lanscape") {
+            margin-top: 16rem;
+        }
+    }
+
+    @include media("<lanscape") {
+        margin-bottom: 8rem;
+    }
+
+    &__img-wrapper {
+        width: 100%;
+        height: 6.4rem;
+        margin-bottom: 4rem;
+
+        @include media("<lanscape") {
+            margin-bottom: 2rem;
+            height: 4.8rem;
+        }
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    h1 {
+        max-width: 80rem;
+        perspective: 600px;
+
+        @include media("<tablet") {
+            max-width: 70rem;
+        }
+
+        @include media("<lanscape") {
+            max-width: 58rem;
+        }
+
+        @include media('<phone') {
+            font-size: 3rem;
+        }
+    }
+
+    &__logo {
+        height: 100%;
+        position: relative;
+
+        svg {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    &__description {
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-top: 2.4rem;
+
+        @include media("<lanscape") {
+            margin-top: 1.6rem;
+            font-size: 2rem;
+            line-height: 1.6;
+        }
+    }
+
+    &__infos {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+
+        @include media("<lanscape") {
+            flex-direction: column;
+        }
+
+        &.mt-80 {
+            @include media("<lanscape") {
+                margin-top: 3.2rem;
+            }
+        }
+    }
+
+    &__visit-link,
+    &__date,
+    &__tags {
+        width: 33%;
+        padding-right: 3.2rem;
+    }
+
+    &__visit-link {
+        @include media("<lanscape") {
+            width: 100%;
+        }
+    }
+
+    &__date {
+        @include media("<lanscape") {
+            margin-top: 3.2rem;
+            width: 100%;
+        }
+    }
+
+    &__tags {
+        @include media("<lanscape") {
+            margin-top: 4.8rem;
+            width: 100%;
+        }
+    }
+
+    &__visit-link {
+        & a {
+            font-size: 2.4rem;
+            line-height: 1.5;
+            font-weight: 400;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            @include media("<lanscape") {
+                font-size: 2rem;
+                line-height: 1.6;
+            }
+
+            & svg {
+                width: 1.6rem;
+                height: 1.6rem;
+                margin-left: .8rem;
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    &::after {
+                        transition: transform .2s ease-out;
+                        transform-origin: 100%;
+                        transform: scaleX(0);
+                    }
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                height: 2px;
+                background-color: var(--color-black);
+                width: 100%;
+                transition: transform .2s ease-out;
+                transform-origin: 0%;
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    &__tag,
+    &__date {
+        font-size: 2.4rem;
+        line-height: 1.5;
+        font-weight: 400;
+
+        @include media("<lanscape") {
+            font-size: 2rem;
+            line-height: 1.6;
+        }
+    }
+
+    &__date {
+        color: var(--color-grey-lighter);
+    }
+}

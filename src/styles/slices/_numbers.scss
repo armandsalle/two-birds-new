@@ -1,0 +1,58 @@
+.slice-numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include media("<lanscape") {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__number {
+        width: calc(100% - 7.2rem);
+
+        @include media("<tablet") {
+            width: calc(100% - 3.2rem);
+        }
+
+        @include media("<phone") {
+            width: 100%;
+        }
+
+        &.mb-32 {
+            @include media("<phone") {
+                margin-bottom: 4.8rem;
+            }
+
+        }
+
+        &:last-of-type {
+            @include media("<phone") {
+                margin-bottom: 0;
+            }
+        }
+
+        & span {
+            display: block;
+        }
+
+        &__title.h1 {
+            @include media("<lanscape") {
+                font-size: 4rem;
+            }
+        }
+
+        &__text {
+            margin-top: .8rem;
+            font-size: 2.4rem;
+            line-height: 1.5;
+
+            @include media("<tablet") {
+                font-size: 2rem;
+                line-height: 1.6;
+            }
+
+            @include media("<phone") {
+                margin-top: 0rem;
+            }
+        }
+    }
+}

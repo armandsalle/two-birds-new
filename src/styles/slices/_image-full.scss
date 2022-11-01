@@ -1,0 +1,13 @@
+.slice-image-full {
+    width: 100%;
+
+    &.mb-32 {
+        @include media("<phone") {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__image {
+        width: 100%;
+    }
+}

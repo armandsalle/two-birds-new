@@ -1,0 +1,55 @@
+.legals {
+    padding-top: 23rem;
+    padding-bottom: 3.2rem;
+
+    @include media("<lanscape") {
+        padding-top: 16rem
+    }
+
+    &__content {
+        margin-bottom: 5.6rem;
+
+        @include media("<lanscape") {
+            margin-bottom: 6.4rem;
+        }
+
+        & h1 {
+            font-size: 5.6rem;
+            line-height: 1.15;
+            margin-bottom: 2.4rem;
+
+            @include media("<lanscape") {
+                font-size: 3.2rem;
+                line-height: 1.25;
+                margin-bottom: .8rem;
+            }
+        }
+
+        & h2 {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 2.4rem;
+
+            @include media("<lanscape") {
+                font-size: 2.8rem;
+                margin-bottom: .8rem;
+            }
+        }
+
+        & p {
+            font-size: 2.4rem;
+            line-height: 1.5;
+            font-weight: 400;
+
+            @include media("<lanscape") {
+                font-size: 2rem;
+                line-height: 1.6;
+            }
+        }
+
+        & strong {
+            color: #5E5E67;
+        }
+    }
+}

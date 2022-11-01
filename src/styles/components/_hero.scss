@@ -1,0 +1,111 @@
+.hero {
+    min-height: 75rem;
+    height: 100vh;
+    opacity: 0;
+
+    @include media("<lanscape") {
+        padding-top: 12rem;
+        height: auto;
+
+        & .d-between-center {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__left {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 50rem;
+
+        @include media("<tablet") {
+            max-width: 40rem;
+        }
+
+        @include media("<lanscape") {
+            margin-top: 3.2rem;
+            max-width: 60rem;
+        }
+    }
+
+    &__right {
+        position: relative;
+        max-width: 60rem;
+        width: 100%;
+        height: 0;
+        padding-top: 60%;
+
+        @include media("<lanscape") {
+            padding-top: 100%;
+        }
+
+        .plants,
+        .macaw,
+        .cockatoo,
+        .lottie-wrapper {
+            position: absolute;
+            width: 100%;
+        }
+
+        .lottie-wrapper {
+            top: 0;
+            left: 0;
+
+            &.none {
+                display: none;
+            }
+        }
+
+        .plants {
+            top: 10%;
+            left: 5%;
+
+            @include media("<desktop") {
+                width: 95%;
+            }
+        }
+
+        .cockatoo {
+            top: -5%;
+            left: 0;
+            max-width: 43rem;
+
+            @include media("<desktop") {
+                top: -10%;
+                width: 70%;
+            }
+
+            // @include media("<tablet") {
+            //     top: 0%;
+            // }
+        }
+
+        .macaw {
+            top: 45%;
+            left: 10%;
+            max-width: 56rem;
+
+            @include media("<desktop") {
+                width: 90%;
+            }
+        }
+    }
+
+    &__text {
+        margin-top: 2.4rem;
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 1.5;
+
+        @include media("<lanscape") {
+            font-size: 2rem;
+            line-height: 1.6;
+            margin-top: 1.2rem;
+        }
+    }
+
+    & .cta.mt-48 {
+        @include media("<lanscape") {
+            margin-top: 3.2rem;
+        }
+    }
+}
